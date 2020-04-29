@@ -13,13 +13,16 @@
 {{ if not $person_page }}
   {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://sourcethemes.com/academic/docs/page-builder/#about " $person_page_path }}
 {{end}}
+
 {{ $person := $person_page.Params }}
+
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 {{ $avatar_shape := site.Params.avatar.shape | default "circle" }}
 
 <!-- About widget -->
 <div class="row">
 	<div class="col-12 col-lg-4">
+		
 		<div id="profile">
 
 		  {{ if site.Params.avatar.gravatar }}
@@ -42,6 +45,7 @@
 				{{ end }}
 			</div>
 
+			<!-- d-none d-lg-inline-flex -->
 			<ul class="network-icon" aria-hidden="true">
 				{{ range $person.social }}
 				{{ $pack := or .icon_pack "fas" }}
@@ -65,6 +69,14 @@
 				{{ end }}
 			</ul>
 
+			<div class="btn-links pt-3 pb-3 d-lg-none">		
+				<a class="btn home btn-outline-primary" href="research_page/" target="_blank"  rel="noopener"> <span>Research</span> </a>
+
+				<a class="btn home btn-outline-primary" href="files/Galli_CV.pdf" target="_blank" rel="noopener"> CV </a>
+
+				<a class="btn home btn-outline-primary" href="teaching_page/" target="_blank" rel="noopener"> Teaching </a>
+			</div>
+
 		</div>
 	</div>
 
@@ -73,27 +85,23 @@
 		{{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
 		{{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
 
-		<div class="about-intro">
+<!-- 		<p id="dimensions"></p>
+		<script>
+		    window.onresize = displayWindowSize;
+		    window.onload = displayWindowSize;
+
+		    function displayWindowSize() {
+		        myWidth = window.innerWidth;
+		        myHeight = window.innerHeight;
+		        // your size calculation code here
+		        document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
+		    };
+		</script> -->
+
+		<div class="about-intro">			
 			{{ $person_page.Content }}
 		</div>
-
-
-		<div class="btn-links pt-3 pb-3">		
-			<a class="btn home btn-outline-primary" href="research_page/" target="_blank"  rel="noopener">
-			<span>Research</span> 
-			</a>
-
-			<a class="btn home btn-outline-primary" href="files/Galli_CV.pdf" target="_blank" rel="noopener">
-				CV
-			</a>
-
-			<a class="btn home btn-outline-primary" href="teaching_page/" target="_blank" rel="noopener">
-				Teaching
-			</a>
-		</div>
-
-
-
+	
 		<div class="row">
 		  {{ with $person.interests }}
 		  <div class="col-md-5">

@@ -9,6 +9,10 @@
   margin: 0 auto 0 auto;
 }
 
+.section-heading h1 {
+	font-size: 2em;
+}
+
 /*.about-intro {*/
 	/*text-align: justify;*/
 /*}*/
@@ -17,11 +21,35 @@
 	font-size: 1rem;
 }
 
+@include media-breakpoint-down(md) {
+	.big-icon {
+		margin-right: 0.5em;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	
+	ul.network-icon {
+		flex-wrap: nowrap;
+	}
+
+	.big-icon {
+		margin-right: 0.25em;
+	}
+}
+
 .btn.home {
   line-height: 1;
   font-size: 1em;  
   padding: .5rem;
   margin: 0 1em 0 0;
+  background-color: $sta-primary;
+  color: white;
+}
+
+.btn.home:hover {
+  background-color: white;
+  color: $sta-primary;
 }
 
 .btn {
@@ -35,6 +63,19 @@
 
 .home-section:first-of-type {
   padding-top: 50px;
+}
+
+/* Change when navbar collapses */
+@include media-breakpoint-down(sm) {
+  .navbar-collapse {
+    z-index: 1031 !important;  // Appear just over navbar.
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: $sta-menu-primary;
+    text-align: center !important;
+  }
 }
 
 

@@ -40,15 +40,19 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:carlo.galli.14@ucl.ac.uk"  # For a direct email link, use "mailto:carlo.galli.14@ucl.ac.uk".
+
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/carlogalli6
+
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?user=pTL93f0AAAAJ&hl=en
+
 - icon: github
   icon_pack: fab
   link: https://github.com/carlogalli
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -59,12 +63,12 @@ social:
 email: ""
 
 ---
-Hello! 
+Welcome! 
 
-I am a macroeconomist with interests in international finance and information economics.
+I am a Postdoctoral researcher at [SciencesPo](https://www.sciencespo.fr/department-economics/en.html), working under the [Sovereign Debt Chair](https://www.sciencespo.fr/psia/chair-sovereign-debt.html).
 
-Next Fall, I will be a Postdoctoral Fellow at the Department of Economics of [SciencesPo](https://www.sciencespo.fr/department-economics/en.html).
+In 2021, I will join [Universidad Carlos III de Madrid](http://economics.uc3m.es/) as an Assistant Professor in the Department of Economics.
 
-In Fall 2021, I will join [Universidad Carlos III de Madrid](http://economics.uc3m.es/) as an Assistant Professor in the Department of Economics.
+I hold a PhD in Economics from [UCL](http://www.ucl.ac.uk/economics) and I am a member of the [Centre for Macroeconomics](http://www.centreformacroeconomics.ac.uk/Home.aspx). 
 
-I obtained my PhD in 2020 from [UCL](http://www.ucl.ac.uk/economics) and I am a member of the [Centre for Macroeconomics](http://www.centreformacroeconomics.ac.uk/Home.aspx). 
+My research interests are in macroeconomics, international finance and information economics. My work studies fiscal and monetary policy, with a particular focus on sovereign debt crises and default risk.
